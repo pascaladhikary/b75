@@ -4,8 +4,8 @@ Best Time to Buy and Sell Stock
 Product of Array Except Self
 Maximum Product Subarray
 Find Minimum in Rotated Sorted Array
-Maximum Product Subarray
 3Sum
+Jump Game
 
 Graph
 Clone Graph
@@ -16,7 +16,6 @@ Alien Dictionary
 Graph Valid Tree
 
 Interval
-Insert Interval
 Merge Intervals
 Non-overlapping Intervals
 
@@ -49,3 +48,18 @@ Word Search II
 Heap
 Top K Frequent Elements
 Find Median from Data Stream 
+
+Matrix
+Spiral Matrix
+Rotate Image
+
+Dynamic Programming
+Maximum Subarray
+Climbing Stairs
+Coin Change
+Longest Increasing Subsequence
+Longest Common Subsequence
+Word Break
+Combination Sum
+House Robber
+Decode Ways
