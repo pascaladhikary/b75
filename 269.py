@@ -7,7 +7,7 @@ class Solution:
                 use seen to mark both cycle and visited
         crux:   DAG
         '''
-        graph = collections.defaultdict(set)
+        graph = {c:set() for w in words for c in w}
 
         for i in range(len(words)-1):
             w1, w2 = words[i], words[i + 1]

@@ -2,7 +2,6 @@ Array
 Two Sum
 Best Time to Buy and Sell Stock
 Product of Array Except Self
-Maximum Product Subarray
 Find Minimum in Rotated Sorted Array
 3Sum
 Jump Game
@@ -18,9 +17,9 @@ Graph Valid Tree
 Interval
 Merge Intervals
 Non-overlapping Intervals
-
+ 
 Linked List
-Reverse a Linked List
+Reverse Linked List
 Merge K Sorted Lists
 Remove Nth Node From End Of List
 Reorder List
@@ -55,6 +54,7 @@ Rotate Image
 
 Dynamic Programming
 Maximum Subarray
+Maximum Product Subarray
 Climbing Stairs
 Coin Change
 Longest Increasing Subsequence

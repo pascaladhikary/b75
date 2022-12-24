@@ -3,15 +3,14 @@ class Solution:
         '''
         notes:  move r to n, then move both
                 dummy puts l behind remove node
+                by starting one before head
         '''
         
         dummy = ListNode(0, head)
         l, r = dummy, head
         
-        c = 0
-        while c < n:# and r != None:
+        for i in range(n):
             r = r.next
-            c += 1
                     
         while r != None:
             l = l.next
