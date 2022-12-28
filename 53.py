@@ -2,14 +2,13 @@ class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         '''
         notes:  subproblem: largest sum ending at i-1
-        crux:   if sum dips below 0, reset
+        crux:   if i-1 is negative just take n
         '''
-        m = [nums[0]] + [0] * (len(nums)-1)
-        
-        for i in range(1, len(nums)):
-            if m[i-1] > 0:
-                m[i] = m[i-1] + nums[i]
-            else:
-                m[i] = nums[i]
+        n = len(nums)
+        memo = [0] * n
+        memo[0] = nums[0]
 
-        return max(m)
+        for i in range(1, n):
+            memo[i] = max(nums[i]+memo[i-1], nums[i])
+
+        return max(memo)

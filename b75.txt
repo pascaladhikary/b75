@@ -29,7 +29,6 @@ Longest Substring Without Repeating Characters
 Longest Repeating Character Replacement
 Minimum Window Substring
 Valid Parentheses
-Longest Palindromic Substring
 Palindromic Substrings
 
 Tree
@@ -48,9 +47,12 @@ Heap
 Top K Frequent Elements
 Find Median from Data Stream 
 
-Matrix
+Math & Matrix
 Spiral Matrix
 Rotate Image
+
+Data Structure
+-
 
 Dynamic Programming
 Maximum Subarray

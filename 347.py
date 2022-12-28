@@ -12,6 +12,3 @@ class Solution:
         heapq.heapify(pairs)
                 
         return [heapq.heappop(pairs)[1] for i in range(k)]
-
-
-            

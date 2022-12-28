@@ -1,11 +1,12 @@
 class TrieNode:
     def __init__(self):
         self.children = {}
-        self.end = False
+        self.is_end = False
     
 class Trie:
     '''
     notes:  use hashmap for easier lookup
+            first TrieNode technically holds all roots
     crux:   need end flag bc app/apple
     '''
 
@@ -14,30 +15,29 @@ class Trie:
 
     def insert(self, word: str) -> None:
         n = self.root
-        
+
         for c in word:
             if c not in n.children:
                 n.children[c] = TrieNode()
             n = n.children[c]
-        n.end = True
+        n.is_end = True
 
     def search(self, word: str) -> bool:
         n = self.root
-        
+
         for c in word:
-            if c not in n.children:
+            if c not in n.children: 
                 return False
             n = n.children[c]
-        
-        return True if n.end else False
-        
+
+        return n.is_end
 
     def startsWith(self, prefix: str) -> bool:
         n = self.root
-        
+
         for c in prefix:
-            if c not in n.children:
+            if c not in n.children: 
                 return False
             n = n.children[c]
-            
+
         return True

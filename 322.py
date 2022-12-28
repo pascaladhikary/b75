@@ -8,17 +8,17 @@ class Solution:
         crux:   let 0 be the only base, otherwise let impossible be -1
         '''
         
-        memo = [-1] * (amount+1)
+        n = amount + 1
+        memo = [-1] * n
         memo[0] = 0
-        
-        for i in range(1, amount+1):
-            paths = []
+
+        for i in range(1, n):
+            res = float('inf')
             for c in coins:
                 if i-c >= 0 and memo[i-c] != -1:
-                    paths.append((memo[i-c], i-c))
+                    res = min(res, memo[i-c])
             
-            if paths:
-                m = min(paths)[1]
-                memo[i] = 1 + memo[m]
-                
+            if res != float('inf'):
+                memo[i] = res + 1
+
         return memo[-1]

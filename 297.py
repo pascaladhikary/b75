@@ -9,8 +9,9 @@ class Codec:
         
         def preorder(node):
             if node == None:
-                res.append('N')
+                res.append('null')
                 return
+                
             res.append(str(node.val))
             preorder(node.left)
             preorder(node.right)
@@ -27,14 +28,16 @@ class Codec:
         
         self.i = 0
         def preorder():
-            if d[self.i] == 'N':
+            if d[self.i] == 'null':
                 self.i += 1
                 return None
             
-            node = TreeNode(int(d[self.i]))
+            node = TreeNode(d[self.i])
             self.i += 1 
+
             node.left = preorder()
             node.right = preorder()    
+
             return node
         
         return preorder()
