@@ -34,6 +34,7 @@ Data Structure
 LRU Cache
 
 Dynamic Programming
+Partition Equal Subset Sum
 Longest Increasing Path In a Matrix
 Distinct Subsequences
 Edit Distance

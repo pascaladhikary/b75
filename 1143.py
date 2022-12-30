@@ -6,14 +6,14 @@ class Solution:
                 if t[i]==t[j], 1 + diagonal since we can't use either of the chars
                 else max(up/left/diagonal), but diag is forced < up/left
         '''
-        m, n = len(text1), len(text2)
-        memo = [[0] * (n+1) for _ in range(m+1)]
-        
-        for i in range(1, m+1):
-            for j in range(1, n+1):
+        m, n = len(text1)+1, len(text2)+1
+        memo = [[0] * n for _ in range(m)]
+
+        for i in range(1, m):
+            for j in range(1, n):
                 if text1[i-1] == text2[j-1]:
                     memo[i][j] = 1 + memo[i-1][j-1]
                 else:
                     memo[i][j] = max(memo[i-1][j], memo[i][j-1])
-                
-        return memo[m][n]
+        
+        return memo[-1][-1]
